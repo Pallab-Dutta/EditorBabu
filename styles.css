@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    /*padding: 20px;
+    border-radius: 8px;*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    /*border-radius: 8px;*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea.auto-resize-textarea {
+    border-radius: 8px; /* Or any other value you prefer for textareas */
+    min-height: 40px; /* Optional: set a minimum height */
+    resize: vertical; /* Optional: still allow manual vertical resizing by user if desired */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: black;
+    /*border-radius: 90px;*/
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 90px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#update-url {
+    display: block;
+    margin: 20px auto;
+}
+
+.url-display {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    word-break: break-all;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#copy-url {
+    background-color: #2ecc71;
+}
+
+#copy-url:hover {
+    background-color: #27ae60;
+}
