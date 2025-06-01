@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             } else if (typeof value === 'number') {
                 formHTML += `<input type="number" id="${key}" name="${key}" value="${value}">`;
-            } else {
+            } else if () {
+		formHTML += `<input type="text" id="${key}" name="${key}" value="null">`;
+	    } else {
                 formHTML += `<input type="text" id="${key}" name="${key}" value="${value}">`;
             }
             
