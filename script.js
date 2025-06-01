@@ -104,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else if (value === '') { // if field is cleared
                         parsedValue = null; // or handle as you see fit, e.g., undefined or keep empty string
                     }
+		} else if (value === 'null') {
+		    parsedValue = null;
                 } else if (Array.isArray(originalValue) || (typeof originalValue === 'object' && originalValue !== null)) {
                      try {
                         parsedValue = JSON.parse(value);
@@ -118,11 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 if (!isEqual(parsedValue, originalValue)) {
-		    if (parsedValue === 'null') {
-			console.log(originalValue);
-			console.log(parsedValue);
-                    	parsedValue = null;
-		    }
                     updatedVariables[key] = parsedValue;
                 }
             } catch (e) { // Catch errors from direct parsing attempts (though mostly handled above)
