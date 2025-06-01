@@ -57,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             } else if (typeof value === 'number') {
                 formHTML += `<input type="number" id="${key}" name="${key}" value="${value}">`;
-            } else if (value === null) {
-		formHTML += `<input type="text" id="${key}" name="${key}" value="null">`;
 	    } else {
                 formHTML += `<input type="text" id="${key}" name="${key}" value="${value}">`;
             }
@@ -99,8 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Attempt to parse if it looks like JSON (array/object) or is boolean/number string
                 if (typeof originalValue === 'boolean') {
                     parsedValue = (value === 'true');
-		} else if (originalValue === 'null') {
-		    parsedValue = null;
                 } else if (typeof originalValue === 'number') {
                     parsedValue = parseFloat(value);
                      if (isNaN(parsedValue) && value !== '') { // if parsing to float fails but original was number
@@ -122,6 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 if (!isEqual(parsedValue, originalValue)) {
+		    if (parsedValue === 'null') {
+                    	parsedValue = null;
+		    }
                     updatedVariables[key] = parsedValue;
                 }
             } catch (e) { // Catch errors from direct parsing attempts (though mostly handled above)
