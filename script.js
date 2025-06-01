@@ -119,7 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (!isEqual(parsedValue, originalValue)) {
 		    if (parsedValue === 'null') {
-                    	parsedValue = originalValue;
+			console.log(originalValue);
+			console.log(parsedValue);
+                    	parsedValue = null;
 		    }
                     updatedVariables[key] = parsedValue;
                 }
