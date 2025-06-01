@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Attempt to parse if it looks like JSON (array/object) or is boolean/number string
                 if (typeof originalValue === 'boolean') {
                     parsedValue = (value === 'true');
+		} else if (originalValue === 'null') {
+		    parsedValue = null;
                 } else if (typeof originalValue === 'number') {
                     parsedValue = parseFloat(value);
                      if (isNaN(parsedValue) && value !== '') { // if parsing to float fails but original was number
